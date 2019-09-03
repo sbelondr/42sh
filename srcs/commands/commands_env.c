@@ -54,12 +54,11 @@ static t_redirection	*cpy_redirection(t_redirection *r)
 int						ft_simple_command_redirection(char **argv,
 		t_redirection *r, t_pos *pos, int fg)
 {
-	int				verif;
-	t_job			*j;
-	t_process		*p;
+	int						verif;
+	t_job					*j;
+	t_process			*p;
 	t_redirection	*cpy;
 
-	verif = 0;
 	cpy = cpy_redirection(r);
 	j = create_new_job(argv, NULL, cpy, fg);
 	p = j->first_process;
@@ -71,5 +70,5 @@ int						ft_simple_command_redirection(char **argv,
 		return (1);
 	}
 	verif = exec_ft_simple_command(j, p, pos, fg);
-	return (0);
+	return (verif);
 }

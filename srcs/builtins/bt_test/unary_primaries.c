@@ -32,7 +32,7 @@ int		u_test(char *str1, char *str2, char *str3)
 
 	if (stat(str2, &sb) != -1)
 	{
-		if ((sb.st_mode & S_IFMT) == S_ISUID)
+		if (sb.st_mode & S_IFMT & S_ISUID)
 			return (0);
 	}
 	(void)str1;

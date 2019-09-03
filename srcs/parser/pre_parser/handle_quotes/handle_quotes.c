@@ -47,11 +47,9 @@ char	*create_merged_string(t_lex **head)
 void	merge_string_token(t_lex **start, t_lex **end)
 {
 	t_lex	*before_start;
-	t_lex	*after_end;
 	t_lex	*node;
 	char	*merged_string;
 
-	after_end = (*end)->next;
 	before_start = detaching(start, end);
 	merged_string = create_merged_string(start);
 	node = create_the_node(&merged_string);
@@ -64,13 +62,11 @@ void	handle_quotes(t_lex **head)
 {
 	t_lex	*start;
 	t_lex	*end;
-	t_lex	*ptr;
 
 	start = NULL;
 	end = NULL;
 	if ((*head)->token->type == 21 && (!(*head)->next))
 		return ;
-	ptr = *head;
 	if ((start = identify_start(head)))
 	{
 		end = identify_end(&start);

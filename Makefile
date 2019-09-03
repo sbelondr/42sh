@@ -256,7 +256,8 @@ SRCS_NAMES = main.c \
 			 create_commands.c\
 			 init_heredoc.c\
 			 reading_input.c\
-			 remove_element.c
+			 remove_element.c\
+			 display.c
 
 
 OBJS_NAMES = $(SRCS_NAMES:.c=.o)

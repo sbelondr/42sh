@@ -71,7 +71,7 @@ int			ft_create_maillon_redirect(t_redirect *r, int base, int new_fd,
 		r->base = base;
 		r->new_fd = new_fd;
 		r->name_file = (redir) ? ft_strdup(redir->filename) : 0;
-		r->type = (redir) ? redir->type : -1;
+		r->type = (redir) ? redir->type : (t_type)-1;
 		if (last)
 			last->next = r;
 		return (0);

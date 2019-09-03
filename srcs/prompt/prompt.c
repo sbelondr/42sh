@@ -97,7 +97,7 @@ char			*check_prompt(char *inputstr, t_multi **multi)
 	if (getenv("TERM") != NULL)
 	{
 		raw_term_mode();
-		print_prompt();
+		display_prompt();
 		multi_push(multi);
 		(*multi)->input = NULL;
 		dpush(&(*multi)->input, ' ');
@@ -106,7 +106,7 @@ char			*check_prompt(char *inputstr, t_multi **multi)
 	else
 	{
 		fill_shell_dumb_mode();
-		ft_putstr("\n\033[31m[DUMB_MODE] &> \033[0m");
+		display_prompt();
 		if ((get_next_line(STDIN_FILENO, &inputstr) != -1)
 			&& !ft_strequ(inputstr, ""))
 			return (inputstr);

@@ -6,7 +6,7 @@
 /*   By: sbelondr <sbelondr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/07 10:31:02 by sbelondr          #+#    #+#             */
-/*   Updated: 2019/08/27 20:32:54 by aleduc           ###   ########.fr       */
+/*   Updated: 2019/09/03 09:24:54 by sbelondr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,19 +31,19 @@ int			apply_parser_var(char *value, char **dst, int *i, int last)
 	return ((*i) + 1);
 }
 
+/*
+** Compte le nombre de / pour savoir si on peux expand la variable
+** Args:	char *line: la chaine de caractere
+**				int i: l'index sur le caractere de line
+*/
+
 int			count_slash(char *line, int i)
 {
-	int	j;
 	int	cnt;
-	int	expand;
 
-	j = -1;
 	cnt = 0;
-	expand = 0;
 	while (--i >= 0 && line[i] && line[i] == '\\')
-	{
 		++cnt;
-	}
 	cnt %= 2;
 	return (cnt);
 }

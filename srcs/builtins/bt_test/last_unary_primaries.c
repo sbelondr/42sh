@@ -18,7 +18,7 @@ int		g_test(char *str1, char *str2, char *str3)
 
 	if (stat(str2, &sb) != -1)
 	{
-		if ((sb.st_mode & S_IFMT) == S_ISGID)
+		if (sb.st_mode & S_IFMT & S_ISGID)
 			return (0);
 	}
 	(void)str1;
