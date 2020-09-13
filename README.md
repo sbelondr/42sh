@@ -1,4 +1,7 @@
 # 42sh
+
+![42sh](ressources/42sh.gif)
+
 Création d'un shell à 4 avec pour objectif:
  - Lecture et édition de ligne avancée avec Termcaps  
 - Analyse lexicale ("Lexing")  
