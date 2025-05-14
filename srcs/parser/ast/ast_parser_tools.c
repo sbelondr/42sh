@@ -14,6 +14,8 @@
 #include "sh21.h"
 #include "parser.h"
 
+extern t_lex	*g_stream;
+
 t_token			*next(void)
 {
 	g_stream = (g_stream->next) ? g_stream->next : g_stream;

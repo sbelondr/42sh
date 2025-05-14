@@ -14,8 +14,11 @@
 #include "lexer.h"
 #include "parser.h"
 
-static char	g_depth[2056];
-static int	g_di;
+static char		g_depth[2056];
+static int		g_di;
+extern int		g_print_ast;
+extern t_lex	*g_stream;
+extern int g_out;
 
 void		print_push(char c)
 {

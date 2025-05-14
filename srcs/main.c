@@ -20,6 +20,11 @@
 t_ht_hash	*g_hash_table;
 t_ht_hash	*g_alias_table;
 
+
+int					g_print_ast;
+t_lex				*g_stream;
+int					g_out;
+
 void		flags(int argc, char **argv)
 {
 	g_print_ast = 0;

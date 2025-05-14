@@ -52,8 +52,8 @@
 
 # define ENTER (buffer[0] == 10 && buffer[1] == 0)
 
-char **g_env;
-int		g_in;
+// char **g_env;
+// int		g_in;
 
 typedef struct		s_node
 {

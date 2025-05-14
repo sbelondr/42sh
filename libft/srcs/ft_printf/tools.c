@@ -21,7 +21,7 @@ void	ft_stock(t_printf **lst, char dst[BUF_S], int (*stock)[3])
 		(*stock)[2] += ft_strchr_exist(dst, '-');
 }
 
-void	ft_cpy_str(char (*dst)[BUF_S], char str[BUF_S])
+void	ft_cpy_str(char (*dst)[BUF_S], char *str)
 {
 	int	i;
 

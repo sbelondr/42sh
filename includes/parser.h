@@ -16,9 +16,9 @@
 # include "sh21.h"
 # include "lexer.h"
 
-int					g_print_ast;
-t_lex				*g_stream;
-int					g_out;
+// int					g_print_ast;
+// t_lex				*g_stream;
+// int					g_out;
 
 # define OP (t->type == SCOLON || t->type == SPIPE || t->type == AMP)
 # define MORE_OP (t->type == DAMP || t->type == DPIPE || t->type == DELIM)

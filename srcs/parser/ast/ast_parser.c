@@ -14,6 +14,8 @@
 #include "sh21.h"
 #include "parser.h"
 
+extern int g_out;
+
 t_ast			*nud(t_token *t)
 {
 	if (t->type == CMD)
